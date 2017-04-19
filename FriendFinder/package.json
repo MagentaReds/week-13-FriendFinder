@@ -1,0 +1,31 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "Sample web app that matches people with others based on survery questions.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MagentaReds/week-13-FriendFinder.git"
+  },
+  "keywords": [
+    "homework",
+    "front-end",
+    "back-end",
+    "node.js",
+    "express.js"
+  ],
+  "author": "Grant Daniels",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MagentaReds/week-13-FriendFinder/issues"
+  },
+  "homepage": "https://github.com/MagentaReds/week-13-FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}
