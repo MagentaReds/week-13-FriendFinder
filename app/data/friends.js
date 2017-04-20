@@ -1,3 +1,4 @@
+var fs =require("fs");
 
 function Person(name, photo, scores){
   this.name=name;
@@ -12,8 +13,9 @@ Person.prototype.compareScores = function(person){
   return diff;
 };
 
-function FriendList(){
-  this.friends=[];
+function FriendList(filename){
+  this.fileName=filename;
+  this.friends=JSON.parse('['+fs.readFileSync(filename, "utf8")+']');
 }
 
 FriendList.prototype.getFriends = function(){
@@ -40,7 +42,16 @@ FriendList.prototype.getBestFriend = function(me){
 
 FriendList.prototype.addFriend = function(person){
   this.friends.push(person);
+  this.writeFile(person);
 };
+
+FriendList.prototype.writeFile = function(newFriend){
+  fs.appendFile(this.fileName, ','+JSON.stringify(newFriend), function(err){
+    if(err)
+      throw err;
+    console.log("File Written Successfully");
+  });
+}
 
 module.exports = {
   Person: Person,
