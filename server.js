@@ -15,8 +15,6 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 
-
-
 apiRoutes(app);
 htmlRoutes(app);
 
