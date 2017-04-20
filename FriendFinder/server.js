@@ -3,6 +3,7 @@ var bodyParser = require("body-parser");
 var path = require("path");
 
 var htmlRoutes = require("./app/routing/htmlRoutes.js");
+var apiRoutes = require("./app/routing/apiRoutes.js");
 
 var PORT = process.env.PORT || 3000;
 
@@ -14,6 +15,9 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 
+
+
+apiRoutes(app);
 htmlRoutes(app);
 
 
