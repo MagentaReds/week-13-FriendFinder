@@ -15,7 +15,17 @@ Person.prototype.compareScores = function(person){
 
 function FriendList(filename){
   this.fileName=filename;
-  this.friends=JSON.parse('['+fs.readFileSync(filename, "utf8")+']');
+  //this.friends=JSON.parse('['+fs.readFileSync(filename, "utf8")+']');
+
+  fs.readFile(filename, "utf8", function(err, data){
+    var output;
+    if(err){
+      output="[]";
+    } else{
+      output='['+data+']';
+    }
+    this.friends=JSON.parse(output);
+  }.bind(this));
 }
 
 FriendList.prototype.getFriends = function(){
