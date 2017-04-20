@@ -5,7 +5,7 @@ var express = require("express");
 var FriendList = require("./../data/friends.js").FriendList;
 var Person = require("./../data/friends.js").Person;
 
-var myFriendList = new FriendList();
+var myFriendList = new FriendList("./app/data/list.json");
 
 module.exports = function(app){
 
