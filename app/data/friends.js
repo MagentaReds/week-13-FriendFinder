@@ -60,7 +60,13 @@ FriendList.prototype.addFriend = function(person){
 };
 
 FriendList.prototype.writeFile = function(newFriend){
-  fs.appendFile(this.fileName, ','+JSON.stringify(newFriend), function(err){
+  var output;
+  if(this.friends.length===1)
+    output=JSON.stringify(newFriend);
+  else
+    output=",\n"+JSON.stringify(newFriend);
+
+  fs.appendFile(this.fileName, output, function(err){
     if(err)
       throw err;
     console.log("File Written Successfully");
