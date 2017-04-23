@@ -14,7 +14,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-
 apiRoutes(app);
 htmlRoutes(app);
 
@@ -22,6 +21,3 @@ htmlRoutes(app);
 app.listen(PORT, function(){
   console.log("Server listening on PORT: "+PORT);
 });
-
-
-module.exports = app;
