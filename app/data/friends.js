@@ -1,3 +1,7 @@
+//I'm using this fil for my FriendList and Person object contstructors.
+//FriendList can compare one Person to find the best match of people already in its database.
+//Personn can take another Person to get their difference in scores.
+
 var fs =require("fs");
 
 function Person(name, photo, scores){
