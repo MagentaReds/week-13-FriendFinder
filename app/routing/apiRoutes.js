@@ -1,6 +1,4 @@
 var express = require("express");
-//var bodyParser = require("body-parser");
-//var path = require("path");
 
 var FriendList = require("./../data/friends.js").FriendList;
 var Person = require("./../data/friends.js").Person;
