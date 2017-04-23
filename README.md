@@ -8,6 +8,6 @@ For importing the htmlRoutes and apiRoutes, I set their module.exports as functi
 
 ## Notes:
 
-Since this homework was to test us on back end web development, I used/copied most of the homework sample page html (with some small tweaks) in my solution.  All the backend code is my own, though.
+Since this homework was to test us on back end web development and due to limited time, I used/copied most of the homework sample page html (with some small tweaks) in my solution.  All the backend code is my own, though.
 One of the front end tweaks I did was expand the modal and also use it for error messages instead of using alerts.
 
